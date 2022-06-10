@@ -11,7 +11,7 @@ import java.util.List;
 public class FilmEndpoint {
 
     /**
-     * endpoints to get needed information about meals
+     * endpoints to get needed information about films
      */
     @RestController
     @RequestMapping(value = "film")
