@@ -8,11 +8,14 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class FilmRequest {
+public class Main {
     static protected ArrayList<Film> films;
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner sc = new Scanner(System.in);
+        /**
+         * Get random number from array, will be good random answer. To avoid repeating answer with the same choice
+         */
         Integer goodAnswer = 0 + (int) (Math.random() * 4);
         boolean exit = true;
         int score = 0, round = 0;

@@ -7,6 +7,8 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class FilmDao {
     /**
@@ -35,5 +37,20 @@ public class FilmDao {
         Film film=new Film(id,url,name);
         return film;
 
+    }
+    protected static ArrayList<Film> films;
+
+    public static ArrayList<Film> fetchRandomFilms(int size) throws IOException, InterruptedException {
+        Random rand = new Random();
+        String code;
+        films = new ArrayList<>();
+        while (films.size() != size) {
+            code = "tt0" + rand.nextInt(1000000);
+            Film film = FilmDao.getFilmData(code);
+            if (film != null) {
+                films.add(FilmDao.getFilmData(code));
+            }
+        }
+        return films;
     }
 }
