@@ -22,7 +22,7 @@ public class FilmDao {
                 .GET()
                 .uri(URI.create("https://online-movie-database.p.rapidapi.com/title/get-images?tconst="+id))
                 .header("rapidapi-host", "online-movie-database.p.rapidapi.com")
-                .header("rapidapi-key", "b2d31de054msh0942a6c6bf4f68bp14b6a9jsn50bd2c082a4c")
+                .header("rapidapi-key", "1484a8592cmsh8e8327930cc58b3p142ed7jsnaa21b2abe1a8")
                 .build();
         HttpResponse<String> response=client.send(request,HttpResponse.BodyHandlers.ofString());
         if(response.body().equals("null")){
@@ -35,6 +35,7 @@ public class FilmDao {
         String url=obj.getJSONArray("images").getJSONObject(0).getString("url");
         String name=obj.getJSONArray("images").getJSONObject(0).getString("caption");
         Film film=new Film(id,url,name);
+        System.out.println(film+" Filmdao");
         return film;
 
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><title>W3.CSS Template</title>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,12 +12,10 @@
 </head><body class="w3-light-grey w3-content" style="max-width:1600px" data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-    <h3 class="w3-padding-64 w3-center"><b>QUIZ<br></b></h3>
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
-    <a href="http://localhost:63342/project/quiz.html?_ijt=9i9oagou8rg4ld9r9188vbip6c&_ij_reload=RELOAD_ON_SAVE" onclick="w3_close()" class="w3-bar-item w3-button">PLAY</a>
-    <a href="https://www.w3schools.com" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">SUPPORT</a>
+<nav class="w3-sidebar w3-white w3-text-grey w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+    <h3 class="w3-padding-64 w3-center"><b>SCORE<br></b></h3>
+    <h3 class="w3-padding-64 w3-center"><b><%=score%>/<%=size%><br></b></h3>
+    <a href="/" class="w3-bar-item w3-button">ok</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -32,9 +30,9 @@
     <!-- Photo grid -->
     <div class="w3-row">
         <div class="w3-third">
-            <img src="https://i.pinimg.com/564x/9f/4a/28/9f4a28d6a00f4c094088b41219cbb9ea.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-            <img src="https://i.pinimg.com/564x/d6/13/1c/d6131c3912e32640d583da8db8dffeb9.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
-            <img src="https://i.pinimg.com/564x/e5/3e/d0/e53ed079e51d89999101b4753850e25e.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+            <img src="https://i.pinimg.com/564x/b5/59/86/b559869fce85976b160fab45b5943da4.jpg" style="width:100%" >
+            <img src="https://i.pinimg.com/564x/de/42/a8/de42a8c55cf8d8d4fad3dc718c14d547.jpg" style="width:100%" >
+
         </div>
 
         <div class="w3-third">
@@ -52,11 +50,6 @@
             </div>
         </div>
     </div>
-
-
-
-    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-
     <!-- End page content -->
 </div>
 
